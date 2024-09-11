@@ -1,0 +1,37 @@
+.star {
+    @apply transition-all;
+}
+
+.song {
+    --index-width: 20px;
+    --duration-width: 40px;
+    --remove-width: 18px;
+    --gap: 16px;
+    @apply grid w-full gap-[var(--gap)] text-white items-start;
+    grid-template-columns: var(--index-width) calc(100% - var(--gap) * 3 - var(--index-width) - var(--duration-width) - var(--remove-width)) var(--duration-width) var(--remove-width);
+}
+
+.disabled {
+    @apply opacity-30;
+}
+
+.song-title {
+    @apply text-xl w-full
+}
+
+.song-index, .song-duration {
+    @apply text-[#828282] text-lg
+}
+
+.song-duration {
+    @apply text-right
+}
+
+/* .star:hover {
+    opacity: 0.8;
+    fill: #EDDC35;
+
+    & path {
+        stroke: #EDDC35;
+    }
+} */

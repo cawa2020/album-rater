@@ -1,0 +1,32 @@
+.card {
+    --radius: 12px;
+    --card-width: 512px;
+    @apply w-[var(--card-width)] rounded-xl relative bg-[#111111];
+}
+
+.card-header {
+    @apply w-full bg-cover bg-center text-white px-10 flex flex-col items-center justify-center text-center relative z-10 aspect-square;
+}
+
+.card-header__img {
+    --radius: 12px;
+    @apply w-64 mb-6 rounded-md;
+}
+
+.card-header__blur-img {
+    @apply absolute left-0 right-0 top-0 object-cover rounded-xl blur-xl brightness-50;
+    width: calc(var(--card-width) + 200px);
+    mask-image: linear-gradient(black 20%, black 80%, transparent 100%);
+}
+
+.card-header__album {
+    @apply font-medium text-4xl mb-3;
+}
+
+.card-header__artist {
+    @apply text-2xl text-gray-300 font-normal;
+}
+
+.card-song-container {
+    @apply space-y-6 p-8 pt-8 w-full relative;
+}
