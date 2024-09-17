@@ -1,7 +1,7 @@
 .card {
     --radius: 12px;
     --card-width: 512px;
-    @apply w-[var(--card-width)] rounded-xl relative bg-[#111111];
+    @apply w-[var(--card-width)] rounded-xl relative bg-[#111111] h-min max-h-[80vh] overflow-auto;
 }
 
 .card-header {
@@ -9,7 +9,6 @@
 }
 
 .card-header__img {
-    --radius: 12px;
     @apply w-64 mb-6 rounded-md;
 }
 

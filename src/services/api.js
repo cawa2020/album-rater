@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export function getSongsBySearch(search) {
-    return _request('search?q=' + search, "GET")
+    return _request(`search?q=${search}`, "GET")
 }
 
 export function getAlbumById(albumId) {
@@ -19,7 +19,7 @@ async function _request(path, method, body) {
 
     return axios({
         method: method,
-        url: "https://deezerdevs-deezer.p.rapidapi.com/" + path,
+        url: "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/" + path,
         data: body,
         headers: headers
     }).then((res) => res.data)

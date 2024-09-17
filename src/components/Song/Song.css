@@ -1,14 +1,10 @@
-.star {
-    @apply transition-all;
-}
-
 .song {
     --index-width: 20px;
     --duration-width: 40px;
     --remove-width: 18px;
     --gap: 16px;
-    @apply grid w-full gap-[var(--gap)] text-white items-start;
-    grid-template-columns: var(--index-width) calc(100% - var(--gap) * 3 - var(--index-width) - var(--duration-width) - var(--remove-width)) var(--duration-width) var(--remove-width);
+    @apply flex w-full gap-[var(--gap)] text-white items-center;
+    /* grid-template-columns: var(--index-width) calc(100% - var(--gap) * 3 - var(--index-width) - var(--duration-width) - var(--remove-width)) var(--duration-width) var(--remove-width); */
 }
 
 .disabled {
@@ -24,7 +20,7 @@
 }
 
 .song-duration {
-    @apply text-right
+    @apply min-w-10 text-right
 }
 
 /* .star:hover {
